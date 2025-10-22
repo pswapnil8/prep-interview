@@ -50,10 +50,24 @@ def test_length_of_longest_substring():
 def test_two_sum():
     assert two_sum([2, 7, 11, 15], 9) == [0, 1]
     assert two_sum([3, 2, 4], 6) == [1, 2]
+    assert two_sum([1, 2, 3], 7) is None
 
 
 def test_move_zeros_to_end():
     assert move_zeros_to_end([0, 1, 0, 3, 12]) == [1, 3, 12, 0, 0]
+    assert move_zeros_to_end([]) == []
+    assert move_zeros_to_end([0, 0, 0]) == [0, 0, 0]
+
+
+def test_max_difference_edge_cases():
+    assert max_difference([5, 4, 3, 2, 1]) == 0  # values decreasing, best difference 0
+    assert max_difference([1, 2]) == 1
+    assert max_difference([]) is None
+
+
+def test_flatten_list_edge_cases():
+    assert flatten_list([1, [2, [3, []]]]) == [1, 2, 3]
+    assert flatten_list([()]) == []
 
 
 def test_max_difference():
